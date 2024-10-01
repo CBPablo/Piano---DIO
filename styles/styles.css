@@ -1,0 +1,124 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: brown;
+    color: #fff;
+   
+    
+}
+
+.container{
+    width: 780px;
+    padding: 35px 40px;
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: black;
+}
+.container header{
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h2{
+    color: red;
+    font-size: 1.6rem;
+}
+header .column{
+display: flex;
+align-items: center;
+}
+
+header .column span{
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem  ;
+}
+
+.volume-slider{
+    
+    accent-color: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(239,6,6,1) 35%, rgba(0,0,0,1) 100%);
+}
+.volume-slider::-moz-range-progress{
+    background-color: rgb(255,0,0);
+}
+.volume-slider span{
+    color: black;
+}
+.keys-check span{
+    color: red;
+}
+.keys-check input{
+width: 60px;
+height: 30px;
+appearance: none;
+border-radius: 30px;
+background-color: black;
+cursor: pointer;
+position: relative;
+}
+.keys-check input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color:rgba(255,0,0,1);
+    border: 2mm ridge black;;
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit;
+    transform: translateY(-50%);
+    transition: 1s ease;
+
+}
+.keys-check input:checked::before{
+left: 2.1rem;
+background-color:black;
+border: 4mm ridge rgba(255,0,0,1);
+}
+.piano-kays{
+    display: flex;
+    margin-top: 40px;
+    position: relative;
+
+}
+.piano-kays .key{
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+.piano-kays .white{
+    width: 75px;
+    height: 230px;
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(239,6,6,1) 35%, rgba(0,0,0,1) 100%);
+    border-radius: 8px;
+}
+.piano-kays .black{
+    width: 35px;
+    height: 150px;
+    background: rgb(255,0,0);
+    background: radial-gradient(circle,rgba(239,6,6,1), rgba(0,0,0,1),rgba(0,0,0,1));
+    border-radius: 0 0 5px 5px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+}
+
+.piano-kays span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.piano-kays .white:active{
+    box-shadow: inset -10px 5px 20px rgba(239,6,6,1);
+}
+.piano-kays .black:active{
+    box-shadow: inset 30px 5px 20px rgba(0,0,0,1);
+}
